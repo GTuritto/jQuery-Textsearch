@@ -1,6 +1,7 @@
 # jQuery Textsearch plugin
 ### Written by Sankho Mallik for HUGE, inc
 ### smallik@hugeinc.com
+### Thanks to Rob La Placa, Michael Adamek, and Tim McDuffie for contributing
 
 ## What does it do?
 Provides an easy way to search for text within a jQuery object. Rather than doing exact matches e.g. string === $('obj').text(), it searches for the words individually. There will probably be an option added later for exact matches.

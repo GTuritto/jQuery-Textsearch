@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>jQuery textsearch plugin example</title>
+    </head>
+    <body>
+        
+        <input type="text" placeholder="filter table" />
+        
+        <p>Each 'p' element contains samples of text.</p>
+        <p>Note that some 'p' elements share the same samples of text.</p>
+        <p>You should be able to filter the text</p>
+        <p>Simply by typing in what words you want in the input</p>
+        <p>If you view the source code</p>
+        <p>You could learn a lot by reading source code</p>
+        <p>Numbers 23424 14 43 also</p>
+        <p>Make pretty sweet filters</p>
+        <p>That ought to be enough don't you think!</p>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <script src="jquery.textsearch.js"></script>
+        <script>        
+        $(function() {
+            
+            $('input').keyup(function(e) {
+                e.preventDefault();
+
+                var that   = $(this);
+    			var string = that.val();
+
+                if (string.length === 0) {
+                
+                    $('p').show();
+                
+                } else {
+
+    			    $('p').textsearch({
+    			    	searchVal	 : string,
+    			    	callback 	 : function(obj, match) {
+    			    		if (!match) {
+    			    		    obj.hide();
+    			    		} else {
+    			    		    obj.show();
+    			    		}
+    			    	}
+    			    });
+    			    
+    			}
+            });
+        })
+        </script>
+    </body>
+</html>

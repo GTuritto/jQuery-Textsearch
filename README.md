@@ -8,7 +8,7 @@ Provides an easy way to search for text within a jQuery object. Rather than doin
 ## How do I use it?
 Like so:
 
-    $('p').textSearch({
+    $('p').textsearch({
         searchVal   : 'words to search for',
         callback    : function(obj, match) {
             // obj   : the individual object that was compared
